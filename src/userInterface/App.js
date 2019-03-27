@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import GameBoard from './molecules/GameBoard';
 
 class App extends Component {
   render() {
@@ -7,6 +8,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
          <h1>Chess</h1>
+
+         <GameBoard />
+         
         </header>
       </div>
     );

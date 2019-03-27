@@ -1,0 +1,21 @@
+.Square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Square:hover {
+  background: #f9efa6;
+  cursor: pointer;
+}
+
+.Square-white {
+  background: #fff;
+}
+
+.Square-black {
+  background: #ccc;
+}

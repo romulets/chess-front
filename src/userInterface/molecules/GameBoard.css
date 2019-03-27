@@ -1,0 +1,36 @@
+.GameBoard {
+  border: 1px solid #000;
+  width: fit-content;
+  height: fit-content;
+}
+
+.GameBoard-container {
+  margin: 20px;
+}
+
+.GameBoard-inner-container {
+  display: flex;
+}
+
+.GameBoard-line {
+  display: flex;
+}
+
+.GameBoard-left-ruler {
+  margin-top: 1px;
+}
+
+.GameBoard-bottom-ruler {
+  display: flex;
+  margin-left: 50px;
+}
+
+.GameBoard-reference {
+  width: 50px;
+  height: 50px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+}
