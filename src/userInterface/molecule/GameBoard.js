@@ -1,29 +1,9 @@
 import React, { Component } from "react";
 import Square from "../atom/Square";
+import { connect } from "react-redux";
 import "./GameBoard.css"
 
 class GameBoard extends Component {
-
-  state = {
-    squares: {}
-  }
-
-  componentDidMount() {
-    const squares = {}
-    for (let number = 1; number <= 8; number++) {
-      squares[number] = {}
-      for (let letterInt = 97; letterInt <= 104; letterInt++) {
-        const letter = String.fromCharCode(letterInt)
-        squares[number][letter] = {
-          color: ((number + letterInt) % 2) === 0 ? 'white' : 'black',
-          position: { number, letter },
-          piece: {}
-        };
-      }
-    }
-
-    this.setState({ squares });
-  }
 
   render() {
     return (
@@ -40,7 +20,7 @@ class GameBoard extends Component {
             <div className="GameBoard-reference">8</div>
           </div>
           <div className="GameBoard">
-            {Object.values(this.state.squares).map((line, key) => (
+            {Object.values(this.props.gameBoard).map((line, key) => (
               <div key={key} className="GameBoard-line">
                 {Object.values(line).map((square, key) => (<Square key={key} model={square} />))}
               </div>
@@ -63,4 +43,8 @@ class GameBoard extends Component {
 
 }
 
-export default GameBoard
+const mapStateToProps = state => {
+  return { gameBoard: state.gameBoard };
+};
+
+export default connect(mapStateToProps)(GameBoard);

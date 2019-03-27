@@ -1,0 +1,2 @@
+export const SET_GAME_BOARD = "SET_GAME_BOARD"
+export const SET_GAME_STATE = "SET_GAME_STATE"
