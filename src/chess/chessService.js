@@ -13,7 +13,7 @@ export async function newGame() {
     for (let letterInt = 97; letterInt <= 104; letterInt++) {
       const letter = String.fromCharCode(letterInt)
       gameBoard[number][letter] = {
-        color: ((number + letterInt) % 2) === 0 ? 'white' : 'black',
+        color: ((number + letterInt) % 2) === 0 ? 'black' : 'white',
         position: { number, letter },
         piece: null
       };

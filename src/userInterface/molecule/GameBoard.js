@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Square from "../atom/Square";
+import Square from "./Square";
 import { connect } from "react-redux";
 import "./GameBoard.css"
 
