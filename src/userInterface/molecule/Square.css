@@ -19,3 +19,7 @@
 .Square-black {
   background: #ccc;
 }
+
+.Square-selected {
+  background: #f9efa6;
+}

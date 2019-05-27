@@ -30,3 +30,35 @@ export async function newGame() {
   store.dispatch(setGameState(gameState));
   store.dispatch(setGameBoard(Object.assign({}, gameBoard)));
 }
+
+export function selectPosition({number, letter}) {
+  let gameBoard = getGameBoard();
+
+  if (!gameBoard[number][letter].piece) {
+    return;
+  }
+
+  const initialSquareState = gameBoard[number][letter].selected
+
+  gameBoard = mapBoardGameSquares(store.getState()['gameBoard'], square => ({...square, selected: false}));
+  gameBoard[number][letter].selected = !initialSquareState;
+  store.dispatch(setGameBoard(gameBoard))
+}
+
+function getGameBoard() {
+  return store.getState()['gameBoard'];
+}
+
+function mapBoardGameSquares(gameBoard, mapper) {
+  const newGameBoard = {};
+  for (const number in gameBoard) {
+    const line = gameBoard[number];
+    newGameBoard[number] = {}
+    for (const letter in line) {
+      const square = line[letter]
+      newGameBoard[number][letter] = mapper(square);
+    }
+  }
+
+  return newGameBoard;
+}

@@ -40,7 +40,6 @@ class Piece extends Component {
 
   render() {
     const { color, type } = this.props
-    console.log(color)
     return piecesIcons[type][color]
   }
 
