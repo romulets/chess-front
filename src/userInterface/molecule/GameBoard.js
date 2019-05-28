@@ -8,6 +8,7 @@ class GameBoard extends Component {
   render() {
     return (
       <div className="GameBoard-container">
+        <p>{this.props.gameState.player} turn</p>
         <div className="GameBoard-inner-container">
           <div className="GameBoard-left-ruler">
             <div className="GameBoard-reference">1</div>
@@ -44,7 +45,7 @@ class GameBoard extends Component {
 }
 
 const mapStateToProps = state => {
-  return { gameBoard: state.gameBoard };
+  return { gameBoard: state.gameBoard, gameState: state.gameState };
 };
 
 export default connect(mapStateToProps)(GameBoard);
