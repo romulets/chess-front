@@ -21,5 +21,9 @@
 }
 
 .Square-selected {
-  background: #f9efa6;
+  background: #4578a7;
+}
+
+.Square-selected:hover {
+  background: #4578a7;
 }
