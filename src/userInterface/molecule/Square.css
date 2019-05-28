@@ -21,9 +21,9 @@
 }
 
 .Square-selected {
-  background: #4578a7;
+  background: #f9efa6;
 }
 
-.Square-selected:hover {
+.Square-candidate {
   background: #4578a7;
 }

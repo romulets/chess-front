@@ -13,8 +13,13 @@ class Square extends Component {
   }
 
   render() {
-    const { color, piece, selected } = this.props.model;
-    const classes = classNames('Square', 'Square-' + color, selected ? 'Square-selected' : null);
+    const { color, piece, selected, playCandidate } = this.props.model;
+    const classes = classNames(
+      'Square', 
+      'Square-' + color, 
+      selected ? 'Square-selected' : null,
+      playCandidate ? 'Square-candidate' : null
+      );
 
     return (
       <div className={classes} onClick={this.selectSquare.bind(this)} >
