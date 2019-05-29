@@ -4,11 +4,23 @@ import { connect } from "react-redux";
 import "./GameBoard.css"
 
 class GameBoard extends Component {
-
+  
   render() {
+
+    const { player } = this.props.gameState
+    const { selectedPiece } = this.props
+
     return (
       <div className="GameBoard-container">
-        <p>{this.props.gameState.player} turn</p>
+        <p>
+          {(() => {
+            if (selectedPiece) {
+              return <span>{player} has selected a {selectedPiece.type}!</span>
+            } else {
+              return <span>{player} turn</span>
+            }
+          })()}
+        </p>
         <div className="GameBoard-inner-container">
           <div className="GameBoard-left-ruler">
             <div className="GameBoard-reference">1</div>
@@ -45,7 +57,7 @@ class GameBoard extends Component {
 }
 
 const mapStateToProps = state => {
-  return { gameBoard: state.gameBoard, gameState: state.gameState };
+  return { gameBoard: state.gameBoard, gameState: state.gameState, selectedPiece: state.selectedPiece };
 };
 
 export default connect(mapStateToProps)(GameBoard);

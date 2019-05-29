@@ -17,27 +17,27 @@ const PIECE_WIDTH = "40px"
 const PIECE_STROKE_WIDTH = "10px"
 
 const piecesIcons = {
-  'com.romulo.chess.domain.piece.Pawn': {
+  'Pawn': {
     BLACK: <PawnIcon fill={BLACK_FILL} stroke={BLACK_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />,
     WHITE: <PawnIcon fill={WHITE_FILL} stroke={WHITE_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />
   },
-  'com.romulo.chess.domain.piece.Rook': {
+  'Rook': {
     BLACK: <RookIcon fill={BLACK_FILL} stroke={BLACK_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />,
     WHITE: <RookIcon fill={WHITE_FILL} stroke={WHITE_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />
   },
-  'com.romulo.chess.domain.piece.Knight': {
+  'Knight': {
     BLACK: <KnightIcon fill={BLACK_FILL} stroke={BLACK_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />,
     WHITE: <KnightIcon fill={WHITE_FILL} stroke={WHITE_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />
   },
-  'com.romulo.chess.domain.piece.Bishop': {
+  'Bishop': {
     BLACK: <BishopIcon fill={BLACK_FILL} stroke={BLACK_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />,
     WHITE: <BishopIcon fill={WHITE_FILL} stroke={WHITE_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />
   },
-  'com.romulo.chess.domain.piece.Queen': {
+  'Queen': {
     BLACK: <QueenIcon fill={BLACK_FILL} stroke={BLACK_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />,
     WHITE: <QueenIcon fill={WHITE_FILL} stroke={WHITE_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />
   },
-  'com.romulo.chess.domain.piece.King': {
+  'King': {
     BLACK: <KingIcon fill={BLACK_FILL} stroke={BLACK_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />,
     WHITE: <KingIcon fill={WHITE_FILL} stroke={WHITE_STROKE} strokeWidth={PIECE_STROKE_WIDTH} width={PIECE_WIDTH} />
   },

@@ -76,8 +76,7 @@ export async function selectSquare(position) {
 
       store.dispatch(selectPiece({ ...completeGameBoard[number][letter].piece, possiblePlays }));
       store.dispatch(setGameBoard(completeGameBoard))
-    }
-    else {
+    } else {
       store.dispatch(unselectPiece());
       store.dispatch(setGameBoard(gameBoardWithPieceSelected))
     }
