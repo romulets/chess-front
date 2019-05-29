@@ -1,2 +1,3 @@
 export const SET_GAME_BOARD = "SET_GAME_BOARD"
 export const SET_GAME_STATE = "SET_GAME_STATE"
+export const SET_SELECTED_PIECE = "SET_SELECTED_PIECE"

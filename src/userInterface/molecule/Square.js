@@ -3,13 +3,13 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./Square.css";
 import Piece from "../atom/Piece";
-import { selectPosition } from "../../chess/chessService";
+import { selectSquare } from "../../chess/chessService";
 
 class Square extends Component {
 
   selectSquare() {
       const { position } = this.props.model
-      selectPosition(position)
+      selectSquare(position)
   }
 
   render() {
